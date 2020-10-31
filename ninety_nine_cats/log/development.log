@@ -1,0 +1,1886 @@
+  [1m[35m (516.9ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (256.9ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (43.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (24.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(723150122408807205)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCats (20201030210102)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (53.2ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201030210102_create_cats.rb:3
+  [1m[35m (8.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(723150122408807205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(723150122408807205)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCats (20201030210102)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (33.9ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201030210102_create_cats.rb:3
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE  INDEX  "index_cats_on_name" ON "cats"  ("name")[0m
+  ↳ db/migrate/20201030210102_create_cats.rb:12
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_cats_on_birth_date" ON "cats"  ("birth_date")[0m
+  ↳ db/migrate/20201030210102_create_cats.rb:13
+  [1m[35m (28.3ms)[0m  [1m[35mCREATE  INDEX  "index_cats_on_color" ON "cats"  ("color")[0m
+  ↳ db/migrate/20201030210102_create_cats.rb:14
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE  INDEX  "index_cats_on_sex" ON "cats"  ("sex")[0m
+  ↳ db/migrate/20201030210102_create_cats.rb:15
+  [1m[36mActiveRecord::SchemaMigration Create (4.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201030210102"]]
+  ↳ bin/rails:9
+  [1m[35m (14.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-30 21:07:45.326936"], ["updated_at", "2020-10-30 21:07:45.326936"]]
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(723150122408807205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hienbui/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (9.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCat Load (55.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (17.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCat Load (2.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCat Load (1.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (28.9ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1976-07-29"], ["color", "yellow"], ["name", "Kyrie Irving"], ["sex", "m"], ["description", "Milwaukee Bucks"], ["created_at", "2020-10-30 21:43:45.952246"], ["updated_at", "2020-10-30 21:43:45.952246"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1986-02-19"], ["color", "orange"], ["name", "Anthony Davis"], ["sex", "m"], ["description", "Sacramento Kings"], ["created_at", "2020-10-30 21:43:45.985512"], ["updated_at", "2020-10-30 21:43:45.985512"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1978-01-01"], ["color", "black"], ["name", "Victor Oladipo"], ["sex", "f"], ["description", "Oklahoma City Thunder"], ["created_at", "2020-10-30 21:43:45.989853"], ["updated_at", "2020-10-30 21:43:45.989853"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1964-07-28"], ["color", "brown"], ["name", "Blake Griffin"], ["sex", "m"], ["description", "Chicago Bulls"], ["created_at", "2020-10-30 21:43:45.993557"], ["updated_at", "2020-10-30 21:43:45.993557"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.8ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1984-09-28"], ["color", "yellow"], ["name", "D'Angelo Russell"], ["sex", "m"], ["description", "Brooklyn Nets"], ["created_at", "2020-10-30 21:43:45.998129"], ["updated_at", "2020-10-30 21:43:45.998129"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1963-05-30"], ["color", "black"], ["name", "Nikola Jokić"], ["sex", "m"], ["description", "Phoenix Suns"], ["created_at", "2020-10-30 21:43:46.001616"], ["updated_at", "2020-10-30 21:43:46.001616"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1959-09-19"], ["color", "brown"], ["name", "Dwayne Wade"], ["sex", "m"], ["description", "San Antonio Spurs"], ["created_at", "2020-10-30 21:43:46.012538"], ["updated_at", "2020-10-30 21:43:46.012538"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1962-11-01"], ["color", "black"], ["name", "Kyle Lowry"], ["sex", "m"], ["description", "Philadelphia 76ers"], ["created_at", "2020-10-30 21:43:46.021704"], ["updated_at", "2020-10-30 21:43:46.021704"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.8ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1994-09-29"], ["color", "orange"], ["name", "Stephen Curry"], ["sex", "m"], ["description", "Oklahoma City Thunder"], ["created_at", "2020-10-30 21:43:46.032734"], ["updated_at", "2020-10-30 21:43:46.032734"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1973-06-11"], ["color", "yellow"], ["name", "Khris Middleton"], ["sex", "f"], ["description", "Sacramento Kings"], ["created_at", "2020-10-30 21:43:46.037529"], ["updated_at", "2020-10-30 21:43:46.037529"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1969-10-28"], ["color", "black"], ["name", "Giannis Antetokounmpo"], ["sex", "m"], ["description", "Detroit Pistons"], ["created_at", "2020-10-30 21:43:46.041155"], ["updated_at", "2020-10-30 21:43:46.041155"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1962-04-06"], ["color", "orange"], ["name", "D'Angelo Russell"], ["sex", "m"], ["description", "Boston Celtics"], ["created_at", "2020-10-30 21:43:46.044894"], ["updated_at", "2020-10-30 21:43:46.044894"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1982-09-19"], ["color", "yellow"], ["name", "Damian Lillard"], ["sex", "f"], ["description", "Los Angeles Clippers"], ["created_at", "2020-10-30 21:43:46.048394"], ["updated_at", "2020-10-30 21:43:46.048394"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (1.8ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1962-05-11"], ["color", "orange"], ["name", "Paul George"], ["sex", "f"], ["description", "Houston Rockets"], ["created_at", "2020-10-30 21:43:46.051744"], ["updated_at", "2020-10-30 21:43:46.051744"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1994-05-18"], ["color", "yellow"], ["name", "Klay Thompson"], ["sex", "m"], ["description", "Houston Rockets"], ["created_at", "2020-10-30 21:43:46.056450"], ["updated_at", "2020-10-30 21:43:46.056450"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1971-05-23"], ["color", "orange"], ["name", "Anthony Davis"], ["sex", "f"], ["description", "New York Knicks"], ["created_at", "2020-10-30 21:43:46.059191"], ["updated_at", "2020-10-30 21:43:46.059191"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1977-06-16"], ["color", "orange"], ["name", "Nikola Jokić"], ["sex", "m"], ["description", "Washington Wizards"], ["created_at", "2020-10-30 21:43:46.061730"], ["updated_at", "2020-10-30 21:43:46.061730"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (1.3ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1963-04-13"], ["color", "yellow"], ["name", "James Harden"], ["sex", "f"], ["description", "Golden State Warriors"], ["created_at", "2020-10-30 21:43:46.064962"], ["updated_at", "2020-10-30 21:43:46.064962"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1987-05-15"], ["color", "yellow"], ["name", "Kawhi Leonard"], ["sex", "m"], ["description", "Golden State Warriors"], ["created_at", "2020-10-30 21:43:46.068928"], ["updated_at", "2020-10-30 21:43:46.068928"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1958-09-14"], ["color", "orange"], ["name", "Dirk Nowitzki"], ["sex", "f"], ["description", "Washington Wizards"], ["created_at", "2020-10-30 21:43:46.071363"], ["updated_at", "2020-10-30 21:43:46.071363"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (1.0ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2001-06-09"], ["color", "orange"], ["name", "Dwayne Wade"], ["sex", "m"], ["description", "Utah Jazz"], ["created_at", "2020-10-30 21:43:46.074020"], ["updated_at", "2020-10-30 21:43:46.074020"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1990-03-21"], ["color", "yellow"], ["name", "Blake Griffin"], ["sex", "f"], ["description", "Los Angeles Lakers"], ["created_at", "2020-10-30 21:43:46.078049"], ["updated_at", "2020-10-30 21:43:46.078049"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1974-11-05"], ["color", "yellow"], ["name", "Kevin Durant"], ["sex", "f"], ["description", "Chicago Bulls"], ["created_at", "2020-10-30 21:43:46.080699"], ["updated_at", "2020-10-30 21:43:46.080699"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.8ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1956-11-19"], ["color", "yellow"], ["name", "Joel Embiid"], ["sex", "m"], ["description", "New Orleans Pelicans"], ["created_at", "2020-10-30 21:43:46.083001"], ["updated_at", "2020-10-30 21:43:46.083001"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1970-03-19"], ["color", "brown"], ["name", "LaMarcus Aldridge"], ["sex", "m"], ["description", "Utah Jazz"], ["created_at", "2020-10-30 21:43:46.087099"], ["updated_at", "2020-10-30 21:43:46.087099"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1970-11-14"], ["color", "orange"], ["name", "Russell Westbrook"], ["sex", "m"], ["description", "Minnesota Timberwolves"], ["created_at", "2020-10-30 21:43:46.090634"], ["updated_at", "2020-10-30 21:43:46.090634"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (1.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1987-11-14"], ["color", "brown"], ["name", "Victor Oladipo"], ["sex", "m"], ["description", "San Antonio Spurs"], ["created_at", "2020-10-30 21:43:46.094026"], ["updated_at", "2020-10-30 21:43:46.094026"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (2.1ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1962-08-31"], ["color", "yellow"], ["name", "Joel Embiid"], ["sex", "f"], ["description", "Minnesota Timberwolves"], ["created_at", "2020-10-30 21:43:46.099600"], ["updated_at", "2020-10-30 21:43:46.099600"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2000-03-15"], ["color", "orange"], ["name", "Anthony Davis"], ["sex", "m"], ["description", "Los Angeles Clippers"], ["created_at", "2020-10-30 21:43:46.105992"], ["updated_at", "2020-10-30 21:43:46.105992"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1995-07-09"], ["color", "brown"], ["name", "Kawhi Leonard"], ["sex", "m"], ["description", "Golden State Warriors"], ["created_at", "2020-10-30 21:43:46.109394"], ["updated_at", "2020-10-30 21:43:46.109394"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1996-09-18"], ["color", "yellow"], ["name", "LeBron James"], ["sex", "m"], ["description", "Houston Rockets"], ["created_at", "2020-10-30 21:43:46.112434"], ["updated_at", "2020-10-30 21:43:46.112434"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (1.0ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1969-04-10"], ["color", "black"], ["name", "D'Angelo Russell"], ["sex", "f"], ["description", "Phoenix Suns"], ["created_at", "2020-10-30 21:43:46.114805"], ["updated_at", "2020-10-30 21:43:46.114805"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1996-11-05"], ["color", "black"], ["name", "Dirk Nowitzki"], ["sex", "f"], ["description", "Milwaukee Bucks"], ["created_at", "2020-10-30 21:43:46.118936"], ["updated_at", "2020-10-30 21:43:46.118936"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1984-08-07"], ["color", "yellow"], ["name", "Stephen Curry"], ["sex", "f"], ["description", "Oklahoma City Thunder"], ["created_at", "2020-10-30 21:43:46.121229"], ["updated_at", "2020-10-30 21:43:46.121229"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1993-07-31"], ["color", "yellow"], ["name", "James Harden"], ["sex", "f"], ["description", "Golden State Warriors"], ["created_at", "2020-10-30 21:43:46.123797"], ["updated_at", "2020-10-30 21:43:46.123797"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1973-11-30"], ["color", "black"], ["name", "Ben Simmons"], ["sex", "m"], ["description", "Toronto Raptors"], ["created_at", "2020-10-30 21:43:46.126324"], ["updated_at", "2020-10-30 21:43:46.126324"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1973-04-16"], ["color", "brown"], ["name", "Nikola Jokić"], ["sex", "m"], ["description", "Washington Wizards"], ["created_at", "2020-10-30 21:43:46.128668"], ["updated_at", "2020-10-30 21:43:46.128668"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1991-12-13"], ["color", "black"], ["name", "Joel Embiid"], ["sex", "m"], ["description", "Miami Heat"], ["created_at", "2020-10-30 21:43:46.131458"], ["updated_at", "2020-10-30 21:43:46.131458"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1968-02-05"], ["color", "black"], ["name", "Kemba Walker"], ["sex", "m"], ["description", "Orlando Magic"], ["created_at", "2020-10-30 21:43:46.134386"], ["updated_at", "2020-10-30 21:43:46.134386"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1973-01-09"], ["color", "brown"], ["name", "Dwayne Wade"], ["sex", "f"], ["description", "Golden State Warriors"], ["created_at", "2020-10-30 21:43:46.138935"], ["updated_at", "2020-10-30 21:43:46.138935"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.9ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1957-03-24"], ["color", "yellow"], ["name", "Kevin Durant"], ["sex", "m"], ["description", "Orlando Magic"], ["created_at", "2020-10-30 21:43:46.142532"], ["updated_at", "2020-10-30 21:43:46.142532"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1967-06-15"], ["color", "black"], ["name", "Damian Lillard"], ["sex", "f"], ["description", "Washington Wizards"], ["created_at", "2020-10-30 21:43:46.150179"], ["updated_at", "2020-10-30 21:43:46.150179"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1968-06-30"], ["color", "brown"], ["name", "Kemba Walker"], ["sex", "m"], ["description", "Boston Celtics"], ["created_at", "2020-10-30 21:43:46.152784"], ["updated_at", "2020-10-30 21:43:46.152784"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1968-12-13"], ["color", "brown"], ["name", "Kyle Lowry"], ["sex", "m"], ["description", "New Orleans Pelicans"], ["created_at", "2020-10-30 21:43:46.155622"], ["updated_at", "2020-10-30 21:43:46.155622"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1970-12-07"], ["color", "brown"], ["name", "LaMarcus Aldridge"], ["sex", "f"], ["description", "Portland Trail Blazers"], ["created_at", "2020-10-30 21:43:46.158969"], ["updated_at", "2020-10-30 21:43:46.158969"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1957-04-26"], ["color", "yellow"], ["name", "Anthony Davis"], ["sex", "m"], ["description", "Minnesota Timberwolves"], ["created_at", "2020-10-30 21:43:46.163953"], ["updated_at", "2020-10-30 21:43:46.163953"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1959-06-14"], ["color", "black"], ["name", "Kyrie Irving"], ["sex", "f"], ["description", "Phoenix Suns"], ["created_at", "2020-10-30 21:43:46.169770"], ["updated_at", "2020-10-30 21:43:46.169770"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1961-01-27"], ["color", "brown"], ["name", "Anthony Davis"], ["sex", "m"], ["description", "Philadelphia 76ers"], ["created_at", "2020-10-30 21:43:46.172290"], ["updated_at", "2020-10-30 21:43:46.172290"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1962-03-25"], ["color", "brown"], ["name", "Nikola Vučević"], ["sex", "m"], ["description", "Toronto Raptors"], ["created_at", "2020-10-30 21:43:46.174750"], ["updated_at", "2020-10-30 21:43:46.174750"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1992-09-22"], ["color", "black"], ["name", "Stephen Curry"], ["sex", "f"], ["description", "Philadelphia 76ers"], ["created_at", "2020-10-30 21:43:46.177788"], ["updated_at", "2020-10-30 21:43:46.177788"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2002-10-18"], ["color", "yellow"], ["name", "D'Angelo Russell"], ["sex", "m"], ["description", "Memphis Grizzlies"], ["created_at", "2020-10-30 21:43:46.180892"], ["updated_at", "2020-10-30 21:43:46.180892"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1986-08-16"], ["color", "black"], ["name", "Blake Griffin"], ["sex", "m"], ["description", "San Antonio Spurs"], ["created_at", "2020-10-30 21:43:46.183541"], ["updated_at", "2020-10-30 21:43:46.183541"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.8ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1977-08-12"], ["color", "yellow"], ["name", "LeBron James"], ["sex", "f"], ["description", "Miami Heat"], ["created_at", "2020-10-30 21:43:46.187034"], ["updated_at", "2020-10-30 21:43:46.187034"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1956-12-10"], ["color", "yellow"], ["name", "Dirk Nowitzki"], ["sex", "f"], ["description", "Golden State Warriors"], ["created_at", "2020-10-30 21:43:46.190815"], ["updated_at", "2020-10-30 21:43:46.190815"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1991-02-20"], ["color", "brown"], ["name", "Dirk Nowitzki"], ["sex", "m"], ["description", "New Orleans Pelicans"], ["created_at", "2020-10-30 21:43:46.194189"], ["updated_at", "2020-10-30 21:43:46.194189"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (1.2ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1979-05-02"], ["color", "brown"], ["name", "Kemba Walker"], ["sex", "m"], ["description", "Miami Heat"], ["created_at", "2020-10-30 21:43:46.200883"], ["updated_at", "2020-10-30 21:43:46.200883"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1956-03-22"], ["color", "brown"], ["name", "LaMarcus Aldridge"], ["sex", "f"], ["description", "Atlanta Hawks"], ["created_at", "2020-10-30 21:43:46.204588"], ["updated_at", "2020-10-30 21:43:46.204588"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1981-01-12"], ["color", "yellow"], ["name", "Klay Thompson"], ["sex", "m"], ["description", "Washington Wizards"], ["created_at", "2020-10-30 21:43:46.207308"], ["updated_at", "2020-10-30 21:43:46.207308"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1986-02-05"], ["color", "orange"], ["name", "Khris Middleton"], ["sex", "m"], ["description", "Washington Wizards"], ["created_at", "2020-10-30 21:43:46.210511"], ["updated_at", "2020-10-30 21:43:46.210511"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1966-03-13"], ["color", "black"], ["name", "Kyle Lowry"], ["sex", "m"], ["description", "Miami Heat"], ["created_at", "2020-10-30 21:43:46.213221"], ["updated_at", "2020-10-30 21:43:46.213221"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2002-01-28"], ["color", "orange"], ["name", "Klay Thompson"], ["sex", "m"], ["description", "Milwaukee Bucks"], ["created_at", "2020-10-30 21:43:46.216094"], ["updated_at", "2020-10-30 21:43:46.216094"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1965-12-25"], ["color", "black"], ["name", "Joel Embiid"], ["sex", "f"], ["description", "Detroit Pistons"], ["created_at", "2020-10-30 21:43:46.219142"], ["updated_at", "2020-10-30 21:43:46.219142"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1988-03-31"], ["color", "brown"], ["name", "Bradley Beal"], ["sex", "f"], ["description", "Memphis Grizzlies"], ["created_at", "2020-10-30 21:43:46.221676"], ["updated_at", "2020-10-30 21:43:46.221676"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1988-10-19"], ["color", "yellow"], ["name", "Kyrie Irving"], ["sex", "m"], ["description", "Toronto Raptors"], ["created_at", "2020-10-30 21:43:46.224291"], ["updated_at", "2020-10-30 21:43:46.224291"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1968-03-04"], ["color", "orange"], ["name", "Joel Embiid"], ["sex", "m"], ["description", "Indiana Pacers"], ["created_at", "2020-10-30 21:43:46.226937"], ["updated_at", "2020-10-30 21:43:46.226937"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1975-07-30"], ["color", "black"], ["name", "Ben Simmons"], ["sex", "f"], ["description", "Indiana Pacers"], ["created_at", "2020-10-30 21:43:46.229607"], ["updated_at", "2020-10-30 21:43:46.229607"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1989-05-12"], ["color", "brown"], ["name", "Anthony Davis"], ["sex", "f"], ["description", "Orlando Magic"], ["created_at", "2020-10-30 21:43:46.232233"], ["updated_at", "2020-10-30 21:43:46.232233"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1996-07-02"], ["color", "brown"], ["name", "Kyle Lowry"], ["sex", "f"], ["description", "Orlando Magic"], ["created_at", "2020-10-30 21:43:46.235818"], ["updated_at", "2020-10-30 21:43:46.235818"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1997-02-27"], ["color", "brown"], ["name", "Anthony Davis"], ["sex", "m"], ["description", "Sacramento Kings"], ["created_at", "2020-10-30 21:43:46.239604"], ["updated_at", "2020-10-30 21:43:46.239604"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.8ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2001-01-11"], ["color", "black"], ["name", "D'Angelo Russell"], ["sex", "f"], ["description", "Memphis Grizzlies"], ["created_at", "2020-10-30 21:43:46.243300"], ["updated_at", "2020-10-30 21:43:46.243300"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1958-03-01"], ["color", "orange"], ["name", "Karl-Anthony Towns"], ["sex", "m"], ["description", "Atlanta Hawks"], ["created_at", "2020-10-30 21:43:46.247410"], ["updated_at", "2020-10-30 21:43:46.247410"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1997-12-28"], ["color", "orange"], ["name", "Nikola Jokić"], ["sex", "m"], ["description", "Washington Wizards"], ["created_at", "2020-10-30 21:43:46.250839"], ["updated_at", "2020-10-30 21:43:46.250839"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1972-10-05"], ["color", "yellow"], ["name", "LeBron James"], ["sex", "m"], ["description", "Cleveland Cavaliers"], ["created_at", "2020-10-30 21:43:46.253405"], ["updated_at", "2020-10-30 21:43:46.253405"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1996-07-17"], ["color", "black"], ["name", "Russell Westbrook"], ["sex", "m"], ["description", "Milwaukee Bucks"], ["created_at", "2020-10-30 21:43:46.256740"], ["updated_at", "2020-10-30 21:43:46.256740"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1957-10-18"], ["color", "brown"], ["name", "D'Angelo Russell"], ["sex", "f"], ["description", "Boston Celtics"], ["created_at", "2020-10-30 21:43:46.260030"], ["updated_at", "2020-10-30 21:43:46.260030"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1975-10-26"], ["color", "brown"], ["name", "Dwayne Wade"], ["sex", "m"], ["description", "Indiana Pacers"], ["created_at", "2020-10-30 21:43:46.262531"], ["updated_at", "2020-10-30 21:43:46.262531"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1997-07-13"], ["color", "brown"], ["name", "Dirk Nowitzki"], ["sex", "m"], ["description", "Phoenix Suns"], ["created_at", "2020-10-30 21:43:46.265205"], ["updated_at", "2020-10-30 21:43:46.265205"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1966-01-04"], ["color", "yellow"], ["name", "Dwayne Wade"], ["sex", "m"], ["description", "Toronto Raptors"], ["created_at", "2020-10-30 21:43:46.269600"], ["updated_at", "2020-10-30 21:43:46.269600"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1964-04-12"], ["color", "black"], ["name", "Paul George"], ["sex", "f"], ["description", "Denver Nuggets"], ["created_at", "2020-10-30 21:43:46.272240"], ["updated_at", "2020-10-30 21:43:46.272240"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1972-08-06"], ["color", "orange"], ["name", "Kyrie Irving"], ["sex", "f"], ["description", "New Orleans Pelicans"], ["created_at", "2020-10-30 21:43:46.275117"], ["updated_at", "2020-10-30 21:43:46.275117"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1994-09-10"], ["color", "orange"], ["name", "Nikola Vučević"], ["sex", "m"], ["description", "Miami Heat"], ["created_at", "2020-10-30 21:43:46.278416"], ["updated_at", "2020-10-30 21:43:46.278416"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1973-09-12"], ["color", "orange"], ["name", "Klay Thompson"], ["sex", "m"], ["description", "Golden State Warriors"], ["created_at", "2020-10-30 21:43:46.280688"], ["updated_at", "2020-10-30 21:43:46.280688"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (1.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1985-06-20"], ["color", "orange"], ["name", "Kemba Walker"], ["sex", "f"], ["description", "Golden State Warriors"], ["created_at", "2020-10-30 21:43:46.282996"], ["updated_at", "2020-10-30 21:43:46.282996"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2000-07-04"], ["color", "brown"], ["name", "Victor Oladipo"], ["sex", "f"], ["description", "Memphis Grizzlies"], ["created_at", "2020-10-30 21:43:46.287140"], ["updated_at", "2020-10-30 21:43:46.287140"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1993-11-25"], ["color", "yellow"], ["name", "Nikola Vučević"], ["sex", "m"], ["description", "Boston Celtics"], ["created_at", "2020-10-30 21:43:46.290674"], ["updated_at", "2020-10-30 21:43:46.290674"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1998-08-26"], ["color", "yellow"], ["name", "Khris Middleton"], ["sex", "m"], ["description", "Phoenix Suns"], ["created_at", "2020-10-30 21:43:46.294148"], ["updated_at", "2020-10-30 21:43:46.294148"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1964-07-18"], ["color", "black"], ["name", "Blake Griffin"], ["sex", "f"], ["description", "Los Angeles Clippers"], ["created_at", "2020-10-30 21:43:46.300420"], ["updated_at", "2020-10-30 21:43:46.300420"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1977-03-30"], ["color", "black"], ["name", "Nikola Vučević"], ["sex", "m"], ["description", "Orlando Magic"], ["created_at", "2020-10-30 21:43:46.303836"], ["updated_at", "2020-10-30 21:43:46.303836"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1973-02-13"], ["color", "black"], ["name", "Damian Lillard"], ["sex", "f"], ["description", "Charlotte Hornets"], ["created_at", "2020-10-30 21:43:46.306691"], ["updated_at", "2020-10-30 21:43:46.306691"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1995-03-19"], ["color", "brown"], ["name", "Karl-Anthony Towns"], ["sex", "m"], ["description", "Sacramento Kings"], ["created_at", "2020-10-30 21:43:46.309374"], ["updated_at", "2020-10-30 21:43:46.309374"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1980-01-19"], ["color", "brown"], ["name", "Kevin Durant"], ["sex", "f"], ["description", "Charlotte Hornets"], ["created_at", "2020-10-30 21:43:46.313660"], ["updated_at", "2020-10-30 21:43:46.313660"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2000-01-14"], ["color", "brown"], ["name", "LaMarcus Aldridge"], ["sex", "f"], ["description", "Toronto Raptors"], ["created_at", "2020-10-30 21:43:46.316729"], ["updated_at", "2020-10-30 21:43:46.316729"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1973-09-07"], ["color", "orange"], ["name", "Kawhi Leonard"], ["sex", "f"], ["description", "Philadelphia 76ers"], ["created_at", "2020-10-30 21:43:46.319381"], ["updated_at", "2020-10-30 21:43:46.319381"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1994-09-14"], ["color", "yellow"], ["name", "Kawhi Leonard"], ["sex", "f"], ["description", "Atlanta Hawks"], ["created_at", "2020-10-30 21:43:46.321915"], ["updated_at", "2020-10-30 21:43:46.321915"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1980-08-21"], ["color", "black"], ["name", "Kawhi Leonard"], ["sex", "f"], ["description", "Charlotte Hornets"], ["created_at", "2020-10-30 21:43:46.324565"], ["updated_at", "2020-10-30 21:43:46.324565"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1981-05-21"], ["color", "yellow"], ["name", "Klay Thompson"], ["sex", "f"], ["description", "Washington Wizards"], ["created_at", "2020-10-30 21:43:46.327078"], ["updated_at", "2020-10-30 21:43:46.327078"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1991-08-02"], ["color", "orange"], ["name", "Nikola Vučević"], ["sex", "f"], ["description", "Portland Trail Blazers"], ["created_at", "2020-10-30 21:43:46.329360"], ["updated_at", "2020-10-30 21:43:46.329360"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (1.2ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1971-10-04"], ["color", "yellow"], ["name", "Paul George"], ["sex", "f"], ["description", "New Orleans Pelicans"], ["created_at", "2020-10-30 21:43:46.333338"], ["updated_at", "2020-10-30 21:43:46.333338"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1978-02-22"], ["color", "brown"], ["name", "Nikola Jokić"], ["sex", "m"], ["description", "Toronto Raptors"], ["created_at", "2020-10-30 21:43:46.340519"], ["updated_at", "2020-10-30 21:43:46.340519"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1957-07-29"], ["color", "brown"], ["name", "D'Angelo Russell"], ["sex", "m"], ["description", "Phoenix Suns"], ["created_at", "2020-10-30 21:43:46.344110"], ["updated_at", "2020-10-30 21:43:46.344110"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Load (1.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Started GET "/" for 127.0.0.1 at 2020-10-30 14:47:03 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hienbui/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hienbui/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hienbui/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 37ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-10-30 14:47:13 -0700
+
+ActionController::RoutingError - uninitialized constant CatsController:
+
+Started POST "/__better_errors/c9b050954c85f895/variables" for 127.0.0.1 at 2020-10-30 14:47:13 -0700
+Started GET "/cats" for 127.0.0.1 at 2020-10-30 14:50:40 -0700
+Processing by CatsController#index as HTML
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template cats/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/hienbui/Desktop/aA-classwork_projects/W6D5/ninety_nine_cats/app/views":
+  app/controllers/cats_controller.rb:6:in `index'
+
+Started POST "/__better_errors/202aa78840350fd6/variables" for 127.0.0.1 at 2020-10-30 14:50:41 -0700
+  [1m[36mCat Load (5.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/hienbui/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Started GET "/cats" for 127.0.0.1 at 2020-10-30 14:53:29 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (2.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 1812ms (Views: 1803.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-10-30 14:55:41 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hienbui/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hienbui/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (6.6ms)
+Completed 200 OK in 34ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats" for ::1 at 2020-10-30 14:55:49 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (61.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 117ms (Views: 54.7ms | ActiveRecord: 61.3ms)
+
+
+Started GET "/cats" for ::1 at 2020-10-30 15:00:37 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (86.3ms)
+Completed 200 OK in 285ms (Views: 164.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-10-30 15:00:43 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (45.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (116.6ms)
+Completed 200 OK in 178ms (Views: 128.1ms | ActiveRecord: 45.1ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:00:49 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 1.1ms)
+
+
+
+ActionView::MissingTemplate - Missing template cats/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/hienbui/Desktop/aA-classwork_projects/W6D5/ninety_nine_cats/app/views":
+  app/controllers/cats_controller.rb:12:in `show'
+
+Started POST "/__better_errors/ad9b1d0211f771d3/variables" for 127.0.0.1 at 2020-10-30 15:00:50 -0700
+Started GET "/cats" for ::1 at 2020-10-30 15:02:01 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (91.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (128.9ms)
+Completed 200 OK in 175ms (Views: 82.2ms | ActiveRecord: 91.9ms)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-10-30 15:02:04 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (73.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (112.1ms)
+Completed 200 OK in 186ms (Views: 111.5ms | ActiveRecord: 73.7ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-10-30 15:05:30 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (87.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 166ms (Views: 74.5ms | ActiveRecord: 87.0ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:05:33 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 40.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:06:06 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+Started GET "/cats" for ::1 at 2020-10-30 15:06:07 -0700
+  Rendered cats/show.html.erb within layouts/application (1096.0ms)
+Completed 500 Internal Server Error in 1132ms (ActiveRecord: 0.6ms)
+
+
+
+NameError - undefined local variable or method `cat' for #<#<Class:0x00007f9d2f918d80>:0x00007f9d28477b98>
+Did you mean?  @cat:
+  app/views/cats/show.html.erb:4:in `_app_views_cats_show_html_erb___1750660490020589374_70156484303260'
+  app/controllers/cats_controller.rb:12:in `show'
+
+Started GET "/cats/1" for ::1 at 2020-10-30 15:06:07 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (55.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (104.2ms)
+Completed 200 OK in 204ms (Views: 148.3ms | ActiveRecord: 55.0ms)
+
+
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (9.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+Started POST "/__better_errors/86ba79690c0f42ed/variables" for 127.0.0.1 at 2020-10-30 15:06:08 -0700
+  Rendered cats/show.html.erb within layouts/application (1259.8ms)
+Completed 500 Internal Server Error in 1288ms (ActiveRecord: 9.7ms)
+
+
+
+NameError - undefined local variable or method `cat' for #<#<Class:0x00007f9d2f918d80>:0x00007f9d2d4e2c18>
+Did you mean?  @cat:
+  app/views/cats/show.html.erb:4:in `_app_views_cats_show_html_erb___1750660490020589374_70156523343060'
+  app/controllers/cats_controller.rb:12:in `show'
+
+Started GET "/cats/1" for ::1 at 2020-10-30 15:06:10 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (7.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (868.7ms)
+Completed 500 Internal Server Error in 929ms (ActiveRecord: 34.3ms)
+
+
+
+NameError - undefined local variable or method `cat' for #<#<Class:0x00007f9d2f918d80>:0x00007f9d2f941208>
+Did you mean?  @cat:
+  app/views/cats/show.html.erb:4:in `_app_views_cats_show_html_erb___1750660490020589374_70156522036120'
+  app/controllers/cats_controller.rb:12:in `show'
+
+Started POST "/__better_errors/2d937801f1b3b0cd/variables" for ::1 at 2020-10-30 15:06:12 -0700
+Started GET "/cats/1" for ::1 at 2020-10-30 15:06:22 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:06:23 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (101.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 120ms (Views: 16.2ms | ActiveRecord: 101.9ms)
+
+
+Started GET "/cats" for ::1 at 2020-10-30 15:06:37 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (61.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (90.5ms)
+Completed 200 OK in 130ms (Views: 66.4ms | ActiveRecord: 61.2ms)
+
+
+Started GET "/cats/9" for ::1 at 2020-10-30 15:06:45 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mCat Load (52.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 97ms (Views: 41.9ms | ActiveRecord: 52.2ms)
+
+
+Started GET "/cats/75" for 127.0.0.1 at 2020-10-30 15:06:45 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"75"}
+  [1m[36mCat Load (2.1ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 52ms (Views: 44.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cats" for ::1 at 2020-10-30 15:09:41 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (14.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (54.9ms)
+Completed 200 OK in 133ms (Views: 116.9ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/cats/2" for ::1 at 2020-10-30 15:09:50 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (38.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 128ms (Views: 81.7ms | ActiveRecord: 38.9ms)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-10-30 15:09:54 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (39.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 126ms (Views: 86.4ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/cats/3" for ::1 at 2020-10-30 15:09:55 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cats/6" for ::1 at 2020-10-30 15:09:58 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCat Load (10.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 56ms (Views: 43.2ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-10-30 15:24:37 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (9.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 250ms (Views: 184.7ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/cats/2" for ::1 at 2020-10-30 15:24:48 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (15.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 66ms (Views: 48.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-10-30 15:24:49 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (2.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (170.0ms)
+Completed 200 OK in 643ms (Views: 635.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:24:51 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 147ms (Views: 142.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:26:53 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:26:55 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cats/2" for ::1 at 2020-10-30 15:26:55 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (1.8ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:26:56 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (11.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 53ms (Views: 39.8ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/cats/2" for ::1 at 2020-10-30 15:26:57 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (4.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 74ms (Views: 65.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/cats/2" for ::1 at 2020-10-30 15:27:21 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (17.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 81ms (Views: 61.6ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:27:22 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cats/2" for ::1 at 2020-10-30 15:27:22 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:27:24 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 49ms (Views: 43.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:27:31 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 168ms (Views: 161.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/2" for ::1 at 2020-10-30 15:28:10 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 61ms (Views: 56.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cats/2" for ::1 at 2020-10-30 15:28:11 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:28:12 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:28:13 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (16.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 72ms (Views: 50.4ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:28:57 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (15.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 68ms (Views: 51.1ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:28:58 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (13.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 58ms (Views: 33.9ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/cats/2" for ::1 at 2020-10-30 15:29:09 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (3.8ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 31.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:29:15 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 41.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:29:16 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:29:17 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 38ms (Views: 33.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:29:18 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:29:20 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (12.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 44ms (Views: 28.2ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:29:22 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (41.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 89ms (Views: 41.1ms | ActiveRecord: 41.6ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:29:22 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (2.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 35.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/cats/2" for ::1 at 2020-10-30 15:29:22 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (29.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 55ms (Views: 22.9ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:29:23 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/2" for ::1 at 2020-10-30 15:30:09 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (1.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 26.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cats/1" for 127.0.0.1 at 2020-10-30 15:30:15 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cats/4" for ::1 at 2020-10-30 15:30:31 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-10-30 15:30:34 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:05:27 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hienbui/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 1053ms (Views: 769.0ms | ActiveRecord: 158.1ms)
+
+
+Started GET "/cats" for ::1 at 2020-10-30 16:05:31 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (24.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 79ms (Views: 53.0ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:05:35 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:05:41 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:06:13 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:06:14 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:06:15 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:06:15 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:06:17 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:06:18 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/" for ::1 at 2020-10-30 16:07:48 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (68.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (89.7ms)
+Completed 200 OK in 132ms (Views: 63.3ms | ActiveRecord: 68.3ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:08:41 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-10-30 16:08:52 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (5.1ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 81ms (Views: 34.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:08:56 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:09:22 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:09:27 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:09:35 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:09:36 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:12:21 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:12:24 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:12:31 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:12:56 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:12:57 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:12:58 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:13:04 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:13:25 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:13:26 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:18:11 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 336ms (Views: 282.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-10-30 16:18:24 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (2.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:18:28 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:20:24 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:20:27 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:20:45 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:20:48 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:21:23 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 79ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:21:25 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:21:27 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:21:28 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:27:02 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 118ms (Views: 47.7ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:27:05 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:27:14 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:27:18 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:28:35 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:28:37 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:29:18 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:29:18 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:29:38 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:29:39 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:30:07 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:32:19 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:32:24 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:32:24 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:33:24 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 72ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-10-30 16:33:44 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 55ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:33:51 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-10-30 16:34:55 -0700
+
+AbstractController::ActionNotFound - The action 'create' could not be found for CatsController:
+
+Started POST "/__better_errors/f372dc423719e8bd/variables" for 127.0.0.1 at 2020-10-30 16:34:55 -0700
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:37:43 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 76ms (Views: 26.2ms | ActiveRecord: 29.2ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-10-30 16:37:54 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Joe", "sex"=>"M", "color"=>"black", "birth_date"=>"2020-10-14", "description"=>"sdasdas"}}
+Unpermitted parameter: :birth_date
+Redirected to http://localhost:3000/cats
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-10-30 16:37:54 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (2.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 42ms (Views: 38.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:38:59 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 50ms (Views: 14.6ms | ActiveRecord: 14.9ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-10-30 16:40:17 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Michael Jordan", "sex"=>"M", "color"=>"black", "birth_date"=>"1963-02-17", "description"=>"Chicago Bulls"}}
+Unpermitted parameter: :birth_date
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:22
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:22
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 395ms (Views: 20.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-10-30 16:41:24 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Michael Jordan", "sex"=>"M", "color"=>"black", "birth_date"=>"1963-02-17", "description"=>"Chicago Bulls"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:22
+  [1m[36mCat Create (12.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1963-02-17"], ["color", "black"], ["name", "Michael Jordan"], ["sex", "M"], ["description", "Chicago Bulls"], ["created_at", "2020-10-30 23:41:24.501312"], ["updated_at", "2020-10-30 23:41:24.501312"]]
+  ↳ app/controllers/cats_controller.rb:22
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:22
+Redirected to http://localhost:3000/cats
+Completed 302 Found in 53ms (ActiveRecord: 32.4ms)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-10-30 16:41:24 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cats/101" for 127.0.0.1 at 2020-10-30 16:41:29 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:10
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2020-10-30 16:41:42 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2020-10-30 16:42:04 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Walt Clyde Frazier ", "sex"=>"M", "color"=>"brown", "birth_date"=>"2020-10-21", "description"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:22
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/cats/1/edit" for 127.0.0.1 at 2020-10-30 16:57:34 -0700
+Started GET "/cats/1/edit" for 127.0.0.1 at 2020-10-30 16:57:34 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hienbui/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (34.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hienbui/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:30
+  [1m[36mCat Load (1.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:30
+  Rendering cats/edit.html.erb within layouts/application
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (801.9ms)
+  Rendered cats/edit.html.erb within layouts/application (884.1ms)
+Completed 500 Internal Server Error in 1022ms (ActiveRecord: 39.5ms)
+
+
+Completed 500 Internal Server Error in 1035ms (ActiveRecord: 38.5ms)
+
+
+
+NameError - undefined local variable or method `selected' for #<#<Class:0x00007fc851969288>:0x00007fc84d6d0fe8>
+Did you mean?  select:
+  app/views/cats/edit.html.erb:26:in `_app_views_cats_edit_html_erb___2735981216683471987_70249170622140'
+  app/controllers/cats_controller.rb:32:in `edit'
+
+
+NameError - undefined local variable or method `selected' for #<#<Class:0x00007fc851969288>:0x00007fc851b7a950>
+Did you mean?  select:
+  app/views/cats/edit.html.erb:26:in `_app_views_cats_edit_html_erb___2735981216683471987_70249170622140'
+  app/controllers/cats_controller.rb:32:in `edit'
+
+Started POST "/__better_errors/0dacf999856c2b85/variables" for 127.0.0.1 at 2020-10-30 16:57:37 -0700
+Started GET "/cats/1/edit" for 127.0.0.1 at 2020-10-30 16:58:03 -0700
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:30
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 321ms (Views: 317.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cats/1/edit" for 127.0.0.1 at 2020-10-30 16:59:08 -0700
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:30
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cats/1/edit" for 127.0.0.1 at 2020-10-30 16:59:10 -0700
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:30
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/1/edit" for 127.0.0.1 at 2020-10-30 16:59:25 -0700
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:30
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cats/1/edit" for 127.0.0.1 at 2020-10-30 16:59:44 -0700
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (19.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:30
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 56ms (Views: 35.0ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/cats/1/edit" for 127.0.0.1 at 2020-10-30 16:59:45 -0700
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:30
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.4ms)
+
+
