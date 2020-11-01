@@ -11,9 +11,9 @@
 
     <label>Sex:
         <label for="M">M</label>
-        <input type="radio" name="cat[sex]" value="M">
+        <input type="radio" name="cat[sex]" value="M" <%= "checked" if @cat.sex == "m" %>>
         <label for="F">F</label>
-        <input type="radio" name="cat[sex]" value="F">
+        <input type="radio" name="cat[sex]" value="F" <%= "checked" if @cat.sex == "f" %>>
     </label>
 
     <br>
@@ -30,7 +30,7 @@
 
     <label for="birth_date">Birth Date:</label>
 
-    <input type="date" name="cat[birth_date]" id="">
+    <input type="date" name="cat[birth_date]" id="" value="<%=@cat.birth_date%>">
 
     <br>
 
