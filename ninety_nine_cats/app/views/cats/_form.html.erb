@@ -1,0 +1,43 @@
+
+<form action="<%=type == "new" ? cats_url : cat_url(cat)%>" method="POST">
+    <input type="hidden" name="_method" value=<%= "PATCH" if type == "edit" %> > 
+
+    <label>Cat Name:
+        <input type="text" name="cat[name]" value="<%=cat.name if type == "edit"%>">
+    </label>
+
+    <br>
+
+    <label>Sex:
+        <label for="M">M</label>
+        <input type="radio" name="cat[sex]" value="m" <%= "checked" if type == 'edit' && cat.sex == "m" %>>
+        <label for="F">F</label>
+        <input type="radio" name="cat[sex]" value="f" <%= "checked" if type == 'edit' && cat.sex == "f" %>>
+    </label>
+
+    <br>
+
+    <label for="color">Choose a color:</label>
+    <select name="cat[color]" id="color">
+        <option selected="">--Select a color--</option>
+        <option value="black" <%= "selected" if type == "edit" && cat.color == "black" %>>Black</option>
+        <option value="brown" <%= "selected" if type == "edit" && cat.color == "brown" %>>Brown</option>
+        <option value="orange" <%= "selected" if type == "edit" && cat.color == "orange" %>>Orange</option>
+        <option value="yellow" <%= "selected" if type == "edit" && cat.color == "yellow" %>>Yellow</option>
+    </select>
+
+    <br>
+
+    <label for="birth_date">Birth Date:</label>
+
+    <input type="date" name="cat[birth_date]" id="" value="<%=cat.birth_date if type == 'edit'%>">
+
+    <br>
+
+    <label for="description">Team:</label>
+    <br>
+    <textarea name="cat[description]" id="" cols="30" rows="10"><%=cat.description if type == 'edit'%></textarea>
+    <br>
+    <input type="submit"  value=<%= type == "new" ? "Create" : "Update" %>>
+
+</form>

@@ -1,6 +1,6 @@
 <h1>Update Your Cat!</h1>
 
-<form action="<%= cat_url(@cat) %>" method="POST">
+<!--<form action="<%= cat_url(@cat) %>" method="POST">
     <input type="hidden" name="_method" value="PATCH">    
 
     <label>Cat Name:
@@ -40,4 +40,6 @@
     <br>
     <input type="submit" value="Update Cat">
 
-</form>
+</form>-->
+
+<%= render 'form', cat: @cat, type: 'edit' %>

@@ -1,6 +1,6 @@
 <h1>Create A Cat!</h1>
 
-<form action="<%= cats_url %>" method="POST">
+<!-- <form action="<%= cats_url %>" method="POST">
     <label>Cat Name:
         <input type="text" name="cat[name]" value="<%=@new_cat.name%>">
     </label>
@@ -18,7 +18,7 @@
 
     <label for="color">Choose a color:</label>
     <select name="cat[color]" id="color">
-        <option selected="">Select a color</option>
+        <option selected="">--Select a color--</option>
         <option value="black">Black</option>
         <option value="brown">Brown</option>
         <option value="orange">Orange</option>
@@ -39,5 +39,6 @@
     <br>
     <input type="submit" value="Create My Cat">
 
-</form>
+</form> -->
 
+<%= render 'form', cat: @cat, type: 'new' %>
